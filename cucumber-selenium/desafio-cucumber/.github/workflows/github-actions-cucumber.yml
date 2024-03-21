@@ -1,0 +1,74 @@
+# https://docs.github.com/pt/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+name: Cucumber
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+  push:
+    branches:
+      - main
+      - develop
+      - 'feature/**'
+    tags:
+      - '**'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+env:
+  LANG: "pt_BR.UTF-8"
+  LANGUAGE: "pt_BR:pt"
+  LC_ALL: "pt_BR.UTF-8"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup timezone America/Sao_Paulo
+        uses: szenius/set-timezone@v1.2
+        with:
+          timezoneLinux: "America/Sao_Paulo"
+
+      - name: Setup LANG=pt_BR.UTF-8
+        run: |
+          sudo locale-gen pt_BR.UTF-8
+          sudo update-locale LANG=pt_BR.UTF-8
+          date
+
+      - name: Configure git repository
+        uses: actions/checkout@v3
+
+      - name: Configurando Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Configurando WebDriver for Chrome
+        uses: nanasess/setup-chromedriver@v1
+        with:
+          chromedriver-version: '102.0.5005.61'
+
+      - name: Executando Test
+        run: mvn test
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload arquivos
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'target/report-builder'
+
+      - name: Deploy arquivos no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+
+      - name: Link Relatorio
+        run: echo 'https://github.com/NetoSiqueira/desafio-testes-automatizados/tree/main/cucumber-selenium'
