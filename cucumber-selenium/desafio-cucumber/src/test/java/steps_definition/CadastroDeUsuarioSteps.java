@@ -22,10 +22,10 @@ public class CadastroDeUsuarioSteps extends BaseSteps {
     public void queOUsuarioEstejaNoSiteSeuBarriga() {
        site.navegarSite();
     }
-    @Quando("o usuario clicar no link  “Novo usuario”")
-    public void oUsuarioClicarNoLinkNovoUsuario() {
+    @Quando("o usuario clicar no link  {string}")
+    public void oUsuarioClicarNoLinkNovoUsuario(String link) {
         screenshot();
-        page.clicarNovoUsuario();
+        page.clicarLink(link);
     }
     @Quando("o usuario preencher o campo nome")
     public void oUsuarioPreencherOCampoNome() {
@@ -44,9 +44,42 @@ public class CadastroDeUsuarioSteps extends BaseSteps {
         screenshot();
         page.clicarCadastrar();
     }
-    @Então("o sistema exibe  uma mensagem de sucesso: ”Usuário inserido com sucesso ”")
-    public void oSistemaExibeUmaMensagemDeSucessoUsuárioInseridoComSucesso() {
-        Assert.assertEquals("Usuário inserido com sucesso", alert.retornarMsgSucesso());
+    @Então("o sistema exibe  uma mensagem de sucesso: {string}")
+    public void oSistemaExibeUmaMensagemDeSucessoUsuárioInseridoComSucesso(String msg) {
+        Assert.assertEquals(msg, alert.retornarMsgSucesso());
         screenshot();
+    }
+
+    @Quando("o usuario nao preencher o campo nome")
+    public void oUsuarioNaoPreencherOCampoNome() {
+       page.escreverNome("");
+    }
+    @Então("o sistema exibe  uma mensagem de erro: {string}")
+    public void oSistemaExibeUmaMensagemDeErro(String msg) {
+       screenshot();
+       Assert.assertEquals(msg, alert.retornarMsgErro());
+    }
+
+    @Quando("o usuario preencher o campo nome com um caracter")
+    public void oUsuarioPreencherOCampoNomeComUmCaracter() {
+       page.escreverNome("@");
+    }
+    @Quando("o usuario nao preencher o campo email")
+    public void oUsuarioNaoPreencherOCampoEmail() {
+        page.escreverEmail("");
+    }
+
+    @Quando("o usuario preencher o campo email ja cadastrado")
+    public void oUsuarioPreencherOCampoEmailJaCadastrado() {
+       page.escreverEmail("neto@neto.com");
+    }
+
+    @Quando("o usuario nao preencher o campo senha")
+    public void oUsuarioNaoPreencherOCampoSenha() {
+        page.escreverSenha("");
+    }
+    @Quando("o usuario preencher o campo senha com caracter")
+    public void oUsuarioPreencherOCampoSenhaComCaracter() {
+        page.escreverSenha("1");
     }
 }

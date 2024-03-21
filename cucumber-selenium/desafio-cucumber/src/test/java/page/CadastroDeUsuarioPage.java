@@ -10,10 +10,6 @@ public class CadastroDeUsuarioPage extends BasePage {
     private final By senha = By.id("senha");
     private final By bntCadastrar = By.xpath("//*[@class=\"btn btn-primary\"]");
 
-    public void clicarNovoUsuario(){
-        clicarLink("Novo usuário?");
-    }
-
     public void escreverNome(String cadastro){
         waitElementVisible(nome, 5);
         escreve(nome,cadastro);
