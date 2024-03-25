@@ -27,7 +27,7 @@ import java.util.List;
         "pretty",
         "html:target/cucumber/index.html",
         "json:target/cucumber/index.json"
-    },tags = "@cenario_13"
+    }//,tags = "@cenario_13"
     /**
      * Executar testes no termial
      *
@@ -55,7 +55,7 @@ public class RunCucumberTest {
         reportBuilder.setReportDirectory("target/report-builder/");
         reportBuilder.setReportFileName("index");
         reportBuilder.setReportColor(Color.CYAN); // http://materializecss.com/color.html
-        reportBuilder.setReportTitle("projeto-it-talent-falae");
+        reportBuilder.setReportTitle("desafio-cucumber");
         reportBuilder.setAdditionalInfo("Date", dataReport);
         reportBuilder.setAdditionalInfo("Environment", "N/A");
         reportBuilder.setAdditionalInfo("Browser", "N/A");
