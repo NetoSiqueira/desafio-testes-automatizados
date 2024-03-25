@@ -18,7 +18,7 @@ import java.util.List;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = "src/test/resources/features",	            // Path: features = "classpath:features"
+    features = "src/test/resources/feature",	            // Path: features = "classpath:features"
     glue = "steps_definition",					            // Path: Steps
     monochrome = false,							            // Cores no Terminal default: false
     snippets = CucumberOptions.SnippetType.CAMELCASE,		// METHODOS do Steps em CAMELCASE
@@ -27,7 +27,7 @@ import java.util.List;
         "pretty",
         "html:target/cucumber/index.html",
         "json:target/cucumber/index.json"
-    },tags = "@cenario_8"
+    },tags = "@cenario_13"
     /**
      * Executar testes no termial
      *
