@@ -56,6 +56,8 @@ jobs:
           chromedriver-version: '102.0.5005.61'
 
       - name: Executando Test
+        with:
+          path: 'cucumber-selenium/desafio-cucumber'
         run: mvn test
 
       - name: Setup GitHub Pages
