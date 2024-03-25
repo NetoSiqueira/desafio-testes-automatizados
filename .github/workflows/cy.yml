@@ -11,7 +11,7 @@ on:
     branches:
       - main
       - develop
-      - 'feature/**'
+      - 'cucumber-selenium/desafio-cucumber/src/test/resources/feature/**'
     tags:
       - '**'
 
