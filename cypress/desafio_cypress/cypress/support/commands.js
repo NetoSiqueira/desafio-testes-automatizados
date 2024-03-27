@@ -63,6 +63,30 @@ Cypress.Commands.add('getToken', (user, pass) =>{
         return token
       })
 })
+Cypress.Commands.add('inserirEmail', email =>{
+    cy.get(loc.CADASTRO.EMAIL).type(email)
+})
+
+Cypress.Commands.add('clicar', locator =>{
+    cy.get(locator).click()
+})
+Cypress.Commands.add('inserirNome', nome =>{
+    cy.get(loc.CADASTRO.NOME).type(nome)
+})
+Cypress.Commands.add('inserirSenha', senha =>{
+    cy.get(loc.CADASTRO.SENHA).type(senha)
+})
+
+Cypress.Commands.add('verificarMSG', (locator, msg) =>{
+    cy.get(locator).should('contain', msg)
+})
+
+Cypress.Commands.add('naoPreencher', locator =>{
+    cy.get(locator).type('teste').clear()
+})
+Cypress.Commands.add('site', () =>{
+    cy.visit('https://seubarriga.wcaquino.me/login')
+})
 
 Cypress.Commands.add('resetTestApi', () =>{
     cy.getToken('neto@neto.com', '1234').then(token =>{
@@ -97,5 +121,7 @@ Cypress.Commands.overwrite('request', (originalFn, ...options) =>{
     }
     return originalFn(...options)
 })
+
+
     
 })

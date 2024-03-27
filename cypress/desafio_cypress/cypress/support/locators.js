@@ -6,7 +6,9 @@ const locators = {
         BTN_LOGIN: '.btn'
     },
     ALERT:{
-        MSG_SUCESSO:'.alert-success'
+        MSG_SUCESSO:'.alert-success',
+        MSG_ERRO:'.alert-danger'
+
     },
     MENU:{
         HOME:'[data-test=menu-home]',
