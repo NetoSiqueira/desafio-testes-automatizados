@@ -1,8 +1,8 @@
 const locators = {
 
     LOGIN: {
-        USER: '[data-test=email]',
-        PASSWORD: '[data-test=passwd]',
+        EMAIL: '#email',
+        SENHA: '#senha',
         BTN_LOGIN: '.btn'
     },
     ALERT:{

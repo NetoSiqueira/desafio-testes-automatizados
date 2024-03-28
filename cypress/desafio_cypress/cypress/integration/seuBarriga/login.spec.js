@@ -2,190 +2,156 @@
 
 import loc from '../../support/locators'
 import '../../support/commandsContas'
-import moment from 'moment';
-describe('Cadastro usuario', () =>{
 
-describe('Cadastrar usuário com sucess', () =>{
 
-    it('Dado que o usuario esteja no site seu barriga', () => {
-        cy.site()
-    });
-    it('Quando o usuario clicar no link  “Novo usuario”', () => {
-        cy.clicar(loc.MENU.NOVO_USUARIO)
-    });
-    it('E o usuario preencher o campo nome', () => {
-       
-        cy.inserirNome('teste')
-    });
-    it('E o usuario preencher o campo email', () => {
-       const now = new Date
-        cy.inserirEmail('teste'+now.getMilliseconds()+'@teste.com')
-    });
-    it('E o usuario preencher o campo senha', () => {
-        cy.inserirSenha('1234')
-    });
-    it('E o usuario clicar no botao “Cadastrar”', () => {
-        cy.clicar(loc.CADASTRO.BTN)
-    });
-    it('Então o sistema exibe  uma mensagem de sucesso: ”Usuário inserido com sucesso ”', () => {
-        cy.verificarMSG(loc.ALERT.MSG_SUCESSO, 'Usuário inserido com sucesso')
-    });
-})
 
-describe('Cadastrar usuário com usuário em branco', () =>{
+describe('Login', () => {
 
-    it('Dado que o usuario esteja no site seu barriga', () => {
-        cy.site()
-    });
-    it('Quando o usuario clicar no link  “Novo usuario”', () => {
-        cy.clicar(loc.MENU.NOVO_USUARIO)
-    });
-    it('E o usuario nao preencher o campo nome', () => {
-       cy.naoPreencher(loc.CADASTRO.NOME)
-    });
-    it('E o usuario preencher o campo email', () => {
-       const now = new Date
-       cy.inserirEmail('teste'+now.getMilliseconds()+'@teste.com')
-    });
-    it('E o usuario preencher o campo senha', () => {
-        cy.inserirSenha('1234')
-    });
-    it('E o usuario clicar no botao “Cadastrar”', () => {
-        cy.clicar(loc.CADASTRO.BTN)
-    });
-    it('Então o sistema exibe  uma mensagem de erro: ”Nome é um campo obrigatório"', () => {
-        cy.verificarMSG(loc.ALERT.MSG_ERRO, 'Nome é um campo obrigatório')
-    });
-})
+    describe('Login com sucesso', () =>{
+        it('Dado que o usuario esteja no site seu barriga', () => {
+            cy.site()
+        });
+        it('Quando o usuario preencher o campo email do login', () => {
+             cy.inserirEmail('teste@desafio.com')
+         });
 
-describe('Cadastrar usuário com nome de usuário com um carácter', () =>{
+         it('E o usuario preencher o campo senha', () => {
+             cy.inserirSenha('1234')
+         });
 
-    it('Dado que o usuario esteja no site seu barriga', () => {
-        cy.site()
-    });
-    it('Quando o usuario clicar no link  “Novo usuario”', () => {
-        cy.clicar(loc.MENU.NOVO_USUARIO)
-    });
-    it('E o usuario preencher o campo nome com um caracter', () => {
-       
-        cy.inserirNome('#')
-    });
-    it('E o usuario preencher o campo email', () => {
-       const now = new Date
-        cy.inserirEmail('teste'+now.getMilliseconds()+'@teste.com')
-    });
-    it('E o usuario preencher o campo senha', () => {
-        cy.inserirSenha('1234')
-    });
-    it('E o usuario clicar no botao “Cadastrar”', () => {
-        cy.clicar(loc.CADASTRO.BTN)
-    });
-    it('Então o sistema exibe  uma mensagem de sucesso: ”Usuário inserido com sucesso ”', () => {
-        cy.verificarMSG(loc.ALERT.MSG_SUCESSO, 'Usuário inserido com sucesso')
-    });
-})
+         it('E o usuario clicar no botao “Cadastrar”', () => {
+            cy.clicar(loc.LOGIN.BTN_LOGIN)
+         });
 
-describe('Cadastrar usuário com campo email em branco', () =>{
+         it('Então o sistema exibe  uma mensagem de sucesso: “Bem vindo, teste!"', () => {
+            cy.verificarMSG(loc.ALERT.MSG_SUCESSO, 'Bem vindo, teste!')
+        });
+    })
 
-    it('Dado que o usuario esteja no site seu barriga', () => {
-        cy.site()
-    });
-    it('Quando o usuario clicar no link  “Novo usuario”', () => {
-        cy.clicar(loc.MENU.NOVO_USUARIO)
-    });
-    it('E o usuario preencher o campo nome com um caracter', () => {
-        cy.inserirNome('teste')
-    });
-    it('E o usuario nao preencher o campo email', () => {
-        cy.naoPreencher(loc.CADASTRO.EMAIL)
-    });
-    it('E o usuario preencher o campo senha', () => {
-        cy.inserirSenha('1234')
-    });
-    it('E o usuario clicar no botao “Cadastrar”', () => {
-        cy.clicar(loc.CADASTRO.BTN)
-    });
-    it('Então o sistema exibe  uma mensagem de erro: ”Email é um campo obrigatório”', () => {
-        cy.verificarMSG(loc.ALERT.MSG_ERRO, 'Email é um campo obrigatório')
-    });
-})
+    describe('Login com email em branco', () =>{
+        it('Dado que o usuario esteja no site seu barriga', () => {
+            cy.site()
+        });
+        it('Quando o usuario nao preencher o campo email', () => {
+            cy.naoPreencher(loc.LOGIN.EMAIL)
+         });
 
-describe('Cadastrar usuário com email já cadastrado', () =>{
+         it('E o usuario preencher o campo senha', () => {
+             cy.inserirSenha('1234')
+         });
 
-    it('Dado que o usuario esteja no site seu barriga', () => {
-        cy.site()
-    });
-    it('Quando o usuario clicar no link  “Novo usuario”', () => {
-        cy.clicar(loc.MENU.NOVO_USUARIO)
-    });
-    it('E o usuario preencher o campo nome', () => {
-        cy.inserirNome('teste')
-    });
-    it('E o usuario preencher o campo email ja cadastrado', () => {
-       const now = new Date
-        cy.inserirEmail('neto@neto.com')
-    });
-    it('E o usuario preencher o campo senha', () => {
-        cy.inserirSenha('1234')
-    });
-    it('E o usuario clicar no botao “Cadastrar”', () => {
-        cy.clicar(loc.CADASTRO.BTN)
-    });
-    it('Então o sistema exibe  uma mensagem de erro: ”Endereço de email já utilizado ”', () => {
-        cy.verificarMSG(loc.ALERT.MSG_ERRO, 'Endereço de email já utilizado')
-    });
-})
+         it('E o usuario clicar no botao “Cadastrar”', () => {
+            cy.clicar(loc.LOGIN.BTN_LOGIN)
+         });
 
-describe('Cadastrar usuário com senha em branco', () =>{
+         it('Então o sistema exibe  uma mensagem de erro: “Email é um campo obrigatório”', () => {
+            cy.verificarMSG(loc.ALERT.MSG_ERRO, 'Email é um campo obrigatório')
+        });
+    })
 
-    it('Dado que o usuario esteja no site seu barriga', () => {
-        cy.site()
-    });
-    it('Quando o usuario clicar no link  “Novo usuario”', () => {
-        cy.clicar(loc.MENU.NOVO_USUARIO)
-    });
-    it('E o usuario preencher o campo nome', () => {
-        cy.inserirNome('teste')
-    });
-    it('E o usuario preencher o campo email', () => {
-        const now = new Date
-        cy.inserirEmail('teste'+now.getMilliseconds()+'@teste.com')
-    });
-    it('E o usuario nao preencher o campo senha', () => {
-        cy.naoPreencher(loc.CADASTRO.SENHA)
-    });
-    it('E o usuario clicar no botao “Cadastrar”', () => {
-        cy.clicar(loc.CADASTRO.BTN)
-    });
-    it('Então o sistema exibe  uma mensagem de erro: ”Senha é um campo obrigatório ”', () => {
-        cy.verificarMSG(loc.ALERT.MSG_ERRO, 'Senha é um campo obrigatório')
-    });
-})
+    describe('Login com senha em branco', () =>{
+        it('Dado que o usuario esteja no site seu barriga', () => {
+            cy.site()
+        });
+        it('Quando o usuario preencher o campo email do login', () => {
+             cy.inserirEmail('teste@desafio.com')
+         });
 
-describe('Senha com um carácter', () =>{
+         it('E o usuario nao preencher o campo senha', () => {
+             cy.naoPreencher(loc.LOGIN.SENHA)
+         });
 
-    it('Dado que o usuario esteja no site seu barriga', () => {
-        cy.site()
-    });
-    it('Quando o usuario clicar no link  “Novo usuario”', () => {
-        cy.clicar(loc.MENU.NOVO_USUARIO)
-    });
-    it('E o usuario preencher o campo nome', () => {
-        cy.inserirNome('teste')
-    });
-    it('E o usuario preencher o campo email', () => {
-        const now = new Date
-        cy.inserirEmail('teste'+now.getMilliseconds()+'@teste.com')
-    });
-    it('E o usuario preencher o campo senha com caracter', () => {
-        cy.inserirSenha('#')
-    });
-    it('E o usuario clicar no botao “Cadastrar”', () => {
-        cy.clicar(loc.CADASTRO.BTN)
-    });
-    it('Então o sistema exibe  uma mensagem de sucesso: ”Usuário inserido com sucesso ”', () => {
-        cy.verificarMSG(loc.ALERT.MSG_SUCESSO, 'Usuário inserido com sucesso')
-    });
-})
+         it('E o usuario clicar no botao “Cadastrar”', () => {
+             cy.clicar(loc.LOGIN.BTN_LOGIN)
+         });
+
+         it('Então o sistema exibe  uma mensagem de erro: “Senha é um campo obrigatório”', () => {
+            cy.verificarMSG(loc.ALERT.MSG_ERRO, 'Senha é um campo obrigatório')
+        });
+    })
+
+    describe('Login com email invalido', () =>{
+        it('Dado que o usuario esteja no site seu barriga', () => {
+            cy.site()
+        });
+        it('Quando o usuario preencher o campo email invalido', () => {
+             cy.inserirEmail('testedesafio@desafio.com')
+         });
+
+         it('E o usuario preencher o campo senha', () => {
+             cy.inserirSenha('1234')
+         });
+
+         it('E o usuario clicar no botao “Cadastrar”', () => {
+            cy.clicar(loc.LOGIN.BTN_LOGIN)
+         });
+
+         it('Então o sistema exibe  uma mensagem de erro: “Problemas com o login do usuário”', () => {
+            cy.verificarMSG(loc.ALERT.MSG_ERRO, 'Problemas com o login do usuário')
+        });
+    })
+
+    describe('Login com senha inválida', () =>{
+        it('Dado que o usuario esteja no site seu barriga', () => {
+            cy.site()
+        });
+        it('Quando o usuario preencher o campo email do login', () => {
+             cy.inserirEmail('teste@desafio.com')
+         });
+
+         it('E o usuario nao preencher o campo senha', () => {
+             cy.inserirSenha('12345')
+         });
+
+         it('E o usuario clicar no botao “Cadastrar”', () => {
+             cy.clicar(loc.LOGIN.BTN_LOGIN)
+         });
+
+         it('Então o sistema exibe  uma mensagem de erro: “Problemas com o login do usuário”', () => {
+            cy.verificarMSG(loc.ALERT.MSG_ERRO, 'Problemas com o login do usuário')
+        });
+    })
+
+    describe('Login com email e senha em brancos', () =>{
+        it('Dado que o usuario esteja no site seu barriga', () => {
+            cy.site()
+        });
+        it('Quando o usuario preencher o campo email do login', () => {
+            cy.naoPreencher(loc.LOGIN.EMAIL)
+         });
+
+         it('E o usuario nao preencher o campo senha', () => {
+             cy.naoPreencher(loc.LOGIN.SENHA)
+         });
+
+         it('E o usuario clicar no botao “Cadastrar”', () => {
+             cy.clicar(loc.LOGIN.BTN_LOGIN)
+         });
+
+         it('Então o sistema exibe  duas mensagem de erros: “Email é um campo obrigatório”, “Senha é um campo obrigatório”', () => {
+            cy.verificarMSG(loc.ALERT.MSG_ERRO, 'Email é um campo obrigatório')
+            cy.verificarMSG(loc.ALERT.MSG_ERRO, 'Senha é um campo obrigatório')
+        });
+    })
+    describe('Login com email e senha inválidos', () =>{
+        it('Dado que o usuario esteja no site seu barriga', () => {
+            cy.site()
+        });
+        it('Quando o usuario preencher o campo email invalido', () => {
+             cy.inserirEmail('testedesafio@desafio.com')
+         });
+
+         it('E o usuario preencher o campo senha invalido', () => {
+             cy.inserirSenha('12345')
+         });
+
+         it('E o usuario clicar no botao “Cadastrar”', () => {
+            cy.clicar(loc.LOGIN.BTN_LOGIN)
+         });
+
+         it('Então o sistema exibe  uma mensagem de erro: “Problemas com o login do usuário”', () => {
+            cy.verificarMSG(loc.ALERT.MSG_ERRO, 'Problemas com o login do usuário')
+        });
+    })
 
 })
