@@ -35,9 +35,9 @@ Cypress.Commands.add('clickAlert', (locator, message) =>{
 })
 
 Cypress.Commands.add('login', (user, passwd) =>{
-    cy.visit('https://seubarriga.wcaquino.me/login')
-    cy.get(loc.LOGIN.USER).type(user)
-    cy.get(loc.LOGIN.PASSWORD).type(passwd)
+    cy.visit('https://barrigareact.wcaquino.me')
+    cy.get(loc.LOGIN.EMAIL).type(user)
+    cy.get(loc.LOGIN.SENHA).type(passwd)
     cy.get(loc.LOGIN.BTN_LOGIN).click()
     cy.get(loc.MESSAGE).should('contain', 'Bem vindo')
 })
@@ -66,6 +66,9 @@ Cypress.Commands.add('getToken', (user, pass) =>{
 Cypress.Commands.add('inserirEmail', email =>{
     cy.get(loc.CADASTRO.EMAIL).type(email)
 })
+Cypress.Commands.add('inserirEmailLogin', email =>{
+    cy.get(loc.LOGIN.EMAIL).type(email)
+})
 
 Cypress.Commands.add('clicar', locator =>{
     cy.get(locator).click()
@@ -76,6 +79,9 @@ Cypress.Commands.add('inserirNome', nome =>{
 Cypress.Commands.add('inserirSenha', senha =>{
     cy.get(loc.CADASTRO.SENHA).type(senha)
 })
+Cypress.Commands.add('inserirSenhaLogin', senha =>{
+    cy.get(loc.LOGIN.SENHA).type(senha)
+})
 
 Cypress.Commands.add('verificarMSG', (locator, msg) =>{
     cy.get(locator).should('contain', msg)
@@ -85,7 +91,7 @@ Cypress.Commands.add('naoPreencher', locator =>{
     cy.get(locator).type('teste').clear()
 })
 Cypress.Commands.add('site', () =>{
-    cy.visit('https://seubarriga.wcaquino.me/login')
+    cy.visit('https://barrigareact.wcaquino.me')
 })
 
 Cypress.Commands.add('resetTestApi', () =>{

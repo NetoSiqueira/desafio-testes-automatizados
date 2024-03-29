@@ -7,16 +7,20 @@ import '../../support/commandsContas'
 
 describe('Login', () => {
 
+    after(()=>{
+        cy.clearLocalStorage()
+    })
+
     describe('Login com sucesso', () =>{
         it('Dado que o usuario esteja no site seu barriga', () => {
             cy.site()
         });
         it('Quando o usuario preencher o campo email do login', () => {
-             cy.inserirEmail('teste@desafio.com')
+             cy.inserirEmailLogin('teste@desafio.com')
          });
 
          it('E o usuario preencher o campo senha', () => {
-             cy.inserirSenha('1234')
+             cy.inserirSenhaLogin('1234')
          });
 
          it('E o usuario clicar no botao “Cadastrar”', () => {
@@ -37,7 +41,7 @@ describe('Login', () => {
          });
 
          it('E o usuario preencher o campo senha', () => {
-             cy.inserirSenha('1234')
+             cy.inserirSenhaLogin('1234')
          });
 
          it('E o usuario clicar no botao “Cadastrar”', () => {
@@ -54,7 +58,7 @@ describe('Login', () => {
             cy.site()
         });
         it('Quando o usuario preencher o campo email do login', () => {
-             cy.inserirEmail('teste@desafio.com')
+             cy.inserirEmailLogin('teste@desafio.com')
          });
 
          it('E o usuario nao preencher o campo senha', () => {
@@ -75,11 +79,11 @@ describe('Login', () => {
             cy.site()
         });
         it('Quando o usuario preencher o campo email invalido', () => {
-             cy.inserirEmail('testedesafio@desafio.com')
+             cy.inserirEmailLogin('testedesafio@desafio.com')
          });
 
          it('E o usuario preencher o campo senha', () => {
-             cy.inserirSenha('1234')
+             cy.inserirSenhaLogin('1234')
          });
 
          it('E o usuario clicar no botao “Cadastrar”', () => {
@@ -96,11 +100,11 @@ describe('Login', () => {
             cy.site()
         });
         it('Quando o usuario preencher o campo email do login', () => {
-             cy.inserirEmail('teste@desafio.com')
+             cy.inserirEmailLogin('teste@desafio.com')
          });
 
          it('E o usuario nao preencher o campo senha', () => {
-             cy.inserirSenha('12345')
+             cy.inserirSenhaLogin('12345')
          });
 
          it('E o usuario clicar no botao “Cadastrar”', () => {
@@ -138,11 +142,11 @@ describe('Login', () => {
             cy.site()
         });
         it('Quando o usuario preencher o campo email invalido', () => {
-             cy.inserirEmail('testedesafio@desafio.com')
+             cy.inserirEmailLogin('testedesafio@desafio.com')
          });
 
          it('E o usuario preencher o campo senha invalido', () => {
-             cy.inserirSenha('12345')
+             cy.inserirSenhaLogin('12345')
          });
 
          it('E o usuario clicar no botao “Cadastrar”', () => {

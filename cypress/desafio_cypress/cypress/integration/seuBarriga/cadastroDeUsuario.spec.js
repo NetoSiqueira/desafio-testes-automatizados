@@ -4,6 +4,9 @@ import loc from '../../support/locators'
 import '../../support/commandsContas'
 import moment from 'moment';
 describe('Cadastro usuario', () =>{
+    after(()=>{
+        cy.clearLocalStorage()
+    })
 
 describe('Cadastrar usuário com sucess', () =>{
 
@@ -28,7 +31,7 @@ describe('Cadastrar usuário com sucess', () =>{
         cy.clicar(loc.CADASTRO.BTN)
     });
     it('Então o sistema exibe  uma mensagem de sucesso: ”Usuário inserido com sucesso ”', () => {
-        cy.verificarMSG(loc.ALERT.MSG_SUCESSO, 'Usuário inserido com sucesso')
+        cy.verificarMSG(loc.ALERT.MSG_SUCESSO, 'Usuário adicionado com sucesso')
     });
 })
 
@@ -81,7 +84,7 @@ describe('Cadastrar usuário com nome de usuário com um carácter', () =>{
         cy.clicar(loc.CADASTRO.BTN)
     });
     it('Então o sistema exibe  uma mensagem de sucesso: ”Usuário inserido com sucesso ”', () => {
-        cy.verificarMSG(loc.ALERT.MSG_SUCESSO, 'Usuário inserido com sucesso')
+        cy.verificarMSG(loc.ALERT.MSG_SUCESSO, 'Usuário adicionado com sucesso')
     });
 })
 
@@ -184,7 +187,7 @@ describe('Senha com um carácter', () =>{
         cy.clicar(loc.CADASTRO.BTN)
     });
     it('Então o sistema exibe  uma mensagem de sucesso: ”Usuário inserido com sucesso ”', () => {
-        cy.verificarMSG(loc.ALERT.MSG_SUCESSO, 'Usuário inserido com sucesso')
+        cy.verificarMSG(loc.ALERT.MSG_SUCESSO, 'Usuário adicionado com sucesso')
     });
 })
 

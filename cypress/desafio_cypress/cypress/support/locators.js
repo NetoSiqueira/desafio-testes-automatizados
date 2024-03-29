@@ -1,13 +1,13 @@
 const locators = {
 
     LOGIN: {
-        EMAIL: '#email',
-        SENHA: '#senha',
+        EMAIL: '[data-test=email]',
+        SENHA: '[data-test=passwd]',
         BTN_LOGIN: '.btn'
     },
     ALERT:{
-        MSG_SUCESSO:'.alert-success',
-        MSG_ERRO:'.alert-danger'
+        MSG_SUCESSO:'.toast-message',
+        MSG_ERRO:'.toast-message'
 
     },
     MENU:{
@@ -17,12 +17,12 @@ const locators = {
         RESET: '[href="/reset"]',
         MOVIMENTACAO: '[data-test=menu-movimentacao]',
         EXTRATO: '[data-test=menu-extrato]',
-        NOVO_USUARIO:'[href="/cadastro"]'
+        NOVO_USUARIO:'[href="/registro"]'
     },
     CADASTRO:{
-        NOME:'#nome',
-        EMAIL:'#email',
-        SENHA:'#senha',
+        NOME:'[placeholder="Nome"]',
+        EMAIL:'[placeholder="Email"]',
+        SENHA:'[placeholder="Senha"]',
         BTN:'.btn'
     },
     CONTA:{
