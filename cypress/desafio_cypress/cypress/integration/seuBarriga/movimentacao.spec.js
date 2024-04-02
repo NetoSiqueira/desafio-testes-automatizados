@@ -154,7 +154,7 @@ describe('Cria movimentação', () => {
         });
     })
 
-    describe.only('Criar movimentação com valor com caracteres', () => {
+    describe('Criar movimentação com valor com caracteres', () => {
 
         it('Dado que o usuario esteja logado', () => {
             cy.login('teste@desafio.com', '1234')
