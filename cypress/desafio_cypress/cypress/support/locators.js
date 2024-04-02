@@ -32,6 +32,8 @@ const locators = {
     },
     MESSAGE: '.toast-message',
     MOVIMENTO:{
+        DATA_TRANFER: '[data-test=data-transacao]',
+        DATA_PAG:'[data-test=data-pagamento]',
         DESCRICAO: '#descricao',
         VALOR:'[data-test=valor]',
         INTERESSADO:'#envolvido',

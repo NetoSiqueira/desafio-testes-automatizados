@@ -27,3 +27,4 @@ Cypress.Commands.add('editarConta', conta =>{
     cy.xpath(loc.CONTA.FN_XP_BTN_ALTERAR(conta)).click()
 
 })
+
