@@ -18,3 +18,6 @@ Escrever
 Clicar
     [Arguments]    ${locator}
     Click Element    ${locator} 
+Retornar Mensagem
+    [Arguments]     ${locator}    ${texto} 
+    Element Text Should Be    ${locator}    ${texto}  
