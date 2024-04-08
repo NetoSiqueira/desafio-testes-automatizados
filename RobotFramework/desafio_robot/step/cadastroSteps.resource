@@ -23,6 +23,7 @@ E o usuario clicar no botao Cadastrar
 Então o sistema exibe uma mensagem de sucesso:
     [Arguments]    ${msg}    
     AlertaDeSucesso         ${msg}
+    Close Browser
 
 E o usuario nao preencher o campo nome
     InserirNome    nome=
@@ -30,6 +31,7 @@ E o usuario nao preencher o campo nome
 Então o sistema exibe uma mensagem de erro:
     [Arguments]    ${msg}
     AlertaDeErro    ${msg}
+    Close Browser
 
 E o usuario preencher o campo nome com um caracter
     InserirNome    @

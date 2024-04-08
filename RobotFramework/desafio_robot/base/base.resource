@@ -3,6 +3,7 @@ Library  SeleniumLibrary
 
 *** Variables ***
 ${Browser}    chrome
+${headles}    headlesschrome
 ${Site}       https://seubarriga.wcaquino.me/login
 
 *** Keywords ***
@@ -21,3 +22,4 @@ Clicar
 Retornar Mensagem
     [Arguments]     ${locator}    ${texto} 
     Element Text Should Be    ${locator}    ${texto}  
+
