@@ -1,779 +1,835 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.0rc3 on win32)" generated="2024-04-08T11:08:31.789075" rpa="false" schemaversion="5">
-<suite id="s1" name="Login" source="C:\QAX\desafio\RobotFramework\desafio_robot\test\login.robot">
-<test id="s1-t1" name="Cenario: Login com sucesso" line="9">
-<kw name="Dado que o usuario esteja no site seu barriga" owner="loginSteps">
+<robot generator="Robot 7.0 (Python 3.12.0rc3 on win32)" generated="2024-04-11T21:26:00.469910" rpa="false" schemaversion="5">
+<suite id="s1" name="Movimentacao" source="C:\QAX\desafio\RobotFramework\desafio_robot\test\movimentacao.robot">
+<test id="s1-t1" name="Cenario: Criar movimentação com data de movimentação sem as barras" line="81">
+<kw name="Dado que o usuario esteja logado" owner="movimentacaoSteps">
 <kw name="Abrir navegador" owner="base">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:31.933354" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<msg time="2024-04-11T21:26:00.619471" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
 <arg>${Site}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-08T11:08:31.932352" elapsed="14.074587"/>
+<status status="PASS" start="2024-04-11T21:26:00.619471" elapsed="1.979612"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-08T11:08:46.006939" elapsed="0.115321"/>
+<status status="PASS" start="2024-04-11T21:26:02.599083" elapsed="0.123035"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:08:31.932352" elapsed="14.189908"/>
+<status status="PASS" start="2024-04-11T21:26:00.619471" elapsed="2.102647"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:08:31.932352" elapsed="14.189908"/>
-</kw>
-<kw name="Quando o usuario preencher o campo email do login" owner="loginSteps">
 <kw name="InserirEmail" owner="cadastroPage">
 <kw name="Escrever" owner="base">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:46.123260" level="INFO">Typing text 'teste@desafio.com' into text field '//input[@id="email"]'.</msg>
+<msg time="2024-04-11T21:26:02.723118" level="INFO">Typing text 'teste@desafio.com' into text field '//input[@id="email"]'.</msg>
 <arg>${locator}</arg>
 <arg>${variavel}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:08:46.123260" elapsed="0.057516"/>
+<status status="PASS" start="2024-04-11T21:26:02.723118" elapsed="0.055516"/>
 </kw>
 <arg>${input_email}</arg>
 <arg>${email}</arg>
-<status status="PASS" start="2024-04-08T11:08:46.123260" elapsed="0.057516"/>
+<status status="PASS" start="2024-04-11T21:26:02.722118" elapsed="0.056516"/>
 </kw>
 <arg>teste@desafio.com</arg>
-<status status="PASS" start="2024-04-08T11:08:46.122260" elapsed="0.059517"/>
+<status status="PASS" start="2024-04-11T21:26:02.722118" elapsed="0.056516"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:08:46.122260" elapsed="0.059517"/>
-</kw>
-<kw name="E o usuario preencher o campo senha" owner="loginSteps">
 <kw name="InserirSenha" owner="cadastroPage">
 <kw name="Escrever" owner="base">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:46.182777" level="INFO">Typing text '1234' into text field '//input[@id="senha"]'.</msg>
+<msg time="2024-04-11T21:26:02.780041" level="INFO">Typing text '1234' into text field '//input[@id="senha"]'.</msg>
 <arg>${locator}</arg>
 <arg>${variavel}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:08:46.182777" elapsed="0.043010"/>
+<status status="PASS" start="2024-04-11T21:26:02.778634" elapsed="0.047660"/>
 </kw>
 <arg>${input_senha}</arg>
 <arg>${senha}</arg>
-<status status="PASS" start="2024-04-08T11:08:46.181777" elapsed="0.044010"/>
+<status status="PASS" start="2024-04-11T21:26:02.778634" elapsed="0.047660"/>
 </kw>
 <arg>1234</arg>
-<status status="PASS" start="2024-04-08T11:08:46.181777" elapsed="0.044010"/>
+<status status="PASS" start="2024-04-11T21:26:02.778634" elapsed="0.047660"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:08:46.181777" elapsed="0.044010"/>
-</kw>
-<kw name="E o usuario clicar no botao “Entrar”" owner="loginSteps">
 <kw name="ClicarNoBotao" owner="loginPage">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:46.348247" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-11T21:26:02.926036" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-197.png"&gt;&lt;img src="selenium-screenshot-197.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:08:46.226788" elapsed="0.121459"/>
+<status status="PASS" start="2024-04-11T21:26:02.826294" elapsed="0.099742"/>
 </kw>
 <kw name="Clicar" owner="base">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:46.349247" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<msg time="2024-04-11T21:26:02.927037" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:08:46.349247" elapsed="0.536084"/>
+<status status="PASS" start="2024-04-11T21:26:02.926036" elapsed="0.365258"/>
 </kw>
 <arg>${bnt_login}</arg>
-<status status="PASS" start="2024-04-08T11:08:46.348247" elapsed="0.537084"/>
+<status status="PASS" start="2024-04-11T21:26:02.926036" elapsed="0.365258"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:08:46.225787" elapsed="0.659544"/>
+<status status="PASS" start="2024-04-11T21:26:02.826294" elapsed="0.465000"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:08:46.225787" elapsed="0.659544"/>
-</kw>
-<kw name="Então o sistema exibe uma mensagem de sucesso:" owner="loginSteps">
-<kw name="AlertaDeSucesso" owner="cadastroPage">
-<kw name="Retornar Mensagem" owner="base">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:46.886331" level="INFO">Verifying element '//div[@class="alert alert-success"]' contains exact text 'Bem vindo, teste!'.</msg>
+<kw name="Reset" owner="contasPage">
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:03.292293" level="INFO">Clicking element '//a[@href="/reset"]'.</msg>
 <arg>${locator}</arg>
-<arg>${texto}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-04-08T11:08:46.886331" elapsed="0.014004"/>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:03.292293" elapsed="0.172828"/>
 </kw>
-<arg>${alerta_sucesso}</arg>
-<arg>${msg}</arg>
-<status status="PASS" start="2024-04-08T11:08:46.886331" elapsed="0.014004"/>
+<arg>${reset}</arg>
+<status status="PASS" start="2024-04-11T21:26:03.292293" elapsed="0.172828"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:46.983869" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:08:46.900335" elapsed="0.084534"/>
+<status status="PASS" start="2024-04-11T21:26:03.291294" elapsed="0.173827"/>
 </kw>
-<arg>${msg}</arg>
-<status status="PASS" start="2024-04-08T11:08:46.885331" elapsed="0.099538"/>
+<status status="PASS" start="2024-04-11T21:26:00.619471" elapsed="2.845650"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-08T11:08:46.984869" elapsed="3.803517"/>
+<kw name="Quando o usuario clicar no link “Criar Movimentação”" owner="movimentacaoSteps">
+<kw name="Clicar movimentacao" owner="movimentacaoPage">
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:03.466120" level="INFO">Clicking element '//a[@href="/movimentacao"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:03.466120" elapsed="0.140400"/>
 </kw>
-<arg>Bem vindo, teste!</arg>
-<status status="PASS" start="2024-04-08T11:08:46.885331" elapsed="3.903055"/>
+<arg>${movimentacao}</arg>
+<status status="PASS" start="2024-04-11T21:26:03.465121" elapsed="0.142901"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:08:31.931849" elapsed="18.856537"/>
-</test>
-<test id="s1-t2" name="Cenario: Login com email em branco" line="16">
-<kw name="Dado que o usuario esteja no site seu barriga" owner="loginSteps">
-<kw name="Abrir navegador" owner="base">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:50.789386" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
-<arg>${Site}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-08T11:08:50.789386" elapsed="7.970528"/>
+<status status="PASS" start="2024-04-11T21:26:03.465121" elapsed="0.142901"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-08T11:08:58.759914" elapsed="0.113625"/>
+<status status="PASS" start="2024-04-11T21:26:03.465121" elapsed="0.142901"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:08:50.789386" elapsed="8.084153"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:08:50.789386" elapsed="8.084153"/>
-</kw>
-<kw name="Quando o usuario nao preencher o campo email" owner="loginSteps">
-<kw name="InserirEmail" owner="cadastroPage">
+<kw name="E o usuario preencher o campo Data de Movimentação sem barra" owner="movimentacaoSteps">
+<kw name="Inserir data movimentacao" owner="movimentacaoPage">
 <kw name="Escrever" owner="base">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:58.874540" level="INFO">Typing text '' into text field '//input[@id="email"]'.</msg>
+<msg time="2024-04-11T21:26:03.609032" level="INFO">Typing text '14112024' into text field '//input[@id="data_transacao"]'.</msg>
 <arg>${locator}</arg>
 <arg>${variavel}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:08:58.874540" elapsed="0.049012"/>
+<status status="PASS" start="2024-04-11T21:26:03.609032" elapsed="0.047102"/>
 </kw>
-<arg>${input_email}</arg>
-<arg>${email}</arg>
-<status status="PASS" start="2024-04-08T11:08:58.873539" elapsed="0.050013"/>
+<arg>${data_mov}</arg>
+<arg>${data}</arg>
+<status status="PASS" start="2024-04-11T21:26:03.608022" elapsed="0.048112"/>
 </kw>
-<arg>email=</arg>
-<status status="PASS" start="2024-04-08T11:08:58.873539" elapsed="0.050013"/>
+<arg>14112024</arg>
+<status status="PASS" start="2024-04-11T21:26:03.608022" elapsed="0.048112"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:08:58.873539" elapsed="0.050013"/>
+<status status="PASS" start="2024-04-11T21:26:03.608022" elapsed="0.048112"/>
 </kw>
-<kw name="E o usuario preencher o campo senha" owner="loginSteps">
-<kw name="InserirSenha" owner="cadastroPage">
+<kw name="E o usuario preencher o campo Data de Pagamento" owner="movimentacaoSteps">
+<kw name="Inserir data pagamento" owner="movimentacaoPage">
 <kw name="Escrever" owner="base">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:58.925552" level="INFO">Typing text '1234' into text field '//input[@id="senha"]'.</msg>
+<msg time="2024-04-11T21:26:03.657134" level="INFO">Typing text '11/04/2024' into text field '//input[@id="data_pagamento"]'.</msg>
 <arg>${locator}</arg>
 <arg>${variavel}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:08:58.924553" elapsed="0.044514"/>
+<status status="PASS" start="2024-04-11T21:26:03.657134" elapsed="0.044670"/>
 </kw>
-<arg>${input_senha}</arg>
-<arg>${senha}</arg>
-<status status="PASS" start="2024-04-08T11:08:58.924553" elapsed="0.044514"/>
+<arg>${data_pag_mov}</arg>
+<arg>${data}</arg>
+<status status="PASS" start="2024-04-11T21:26:03.657134" elapsed="0.044670"/>
 </kw>
-<arg>1234</arg>
-<status status="PASS" start="2024-04-08T11:08:58.924553" elapsed="0.044514"/>
+<arg>11/04/2024</arg>
+<status status="PASS" start="2024-04-11T21:26:03.657134" elapsed="0.044670"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:08:58.924553" elapsed="0.044514"/>
+<status status="PASS" start="2024-04-11T21:26:03.657134" elapsed="0.044670"/>
 </kw>
-<kw name="E o usuario clicar no botao “Entrar”" owner="loginSteps">
-<kw name="ClicarNoBotao" owner="loginPage">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:59.063722" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-32.png"&gt;&lt;img src="selenium-screenshot-32.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:08:58.970066" elapsed="0.093656"/>
+<kw name="E o usuario preencher o campo Descrição" owner="movimentacaoSteps">
+<kw name="Inserir descricao" owner="movimentacaoPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:03.702804" level="INFO">Typing text 'teste' into text field '//input[@id="descricao"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:03.702804" elapsed="0.042749"/>
+</kw>
+<arg>${desc_mov}</arg>
+<arg>${desc}</arg>
+<status status="PASS" start="2024-04-11T21:26:03.702804" elapsed="0.042749"/>
+</kw>
+<arg>teste</arg>
+<status status="PASS" start="2024-04-11T21:26:03.702804" elapsed="0.042749"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:03.702804" elapsed="0.042749"/>
+</kw>
+<kw name="E o usuario preencher o campo Interessado" owner="movimentacaoSteps">
+<kw name="Inserir interessado" owner="movimentacaoPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:03.746553" level="INFO">Typing text 'teste' into text field '//input[@id="interessado"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:03.746553" elapsed="0.042686"/>
+</kw>
+<arg>${int_mov}</arg>
+<arg>${int}</arg>
+<status status="PASS" start="2024-04-11T21:26:03.746553" elapsed="0.042686"/>
+</kw>
+<arg>teste</arg>
+<status status="PASS" start="2024-04-11T21:26:03.745553" elapsed="0.043686"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:03.745553" elapsed="0.043686"/>
+</kw>
+<kw name="E o usuario preencher o campo Valor" owner="movimentacaoSteps">
+<kw name="Inserir valor" owner="movimentacaoPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:03.790239" level="INFO">Typing text '123' into text field '//input[@id="valor"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:03.790239" elapsed="0.040684"/>
+</kw>
+<arg>${valor_mov}</arg>
+<arg>${valor}</arg>
+<status status="PASS" start="2024-04-11T21:26:03.789239" elapsed="0.041684"/>
+</kw>
+<arg>123</arg>
+<status status="PASS" start="2024-04-11T21:26:03.789239" elapsed="0.041684"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:03.789239" elapsed="0.041684"/>
+</kw>
+<kw name="E o usuario preencher o campo Conta" owner="movimentacaoSteps">
+<kw name="Selecionar conta" owner="movimentacaoPage">
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:03.831923" level="INFO">Clicking element '//select[@id="conta"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:03.831923" elapsed="0.033164"/>
+</kw>
+<arg>${sel_conta}</arg>
+<status status="PASS" start="2024-04-11T21:26:03.831923" elapsed="0.033164"/>
 </kw>
 <kw name="Clicar" owner="base">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:59.063722" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<msg time="2024-04-11T21:26:03.866087" level="INFO">Clicking element '//option[text()="Conta para movimentacoes"]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:08:59.063722" elapsed="0.135028"/>
+<status status="PASS" start="2024-04-11T21:26:03.866087" elapsed="0.022076"/>
 </kw>
-<arg>${bnt_login}</arg>
-<status status="PASS" start="2024-04-08T11:08:59.063722" elapsed="0.135028"/>
+<arg>${selecionar_conta}</arg>
+<status status="PASS" start="2024-04-11T21:26:03.865087" elapsed="0.023076"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:08:58.970066" elapsed="0.228684"/>
+<status status="PASS" start="2024-04-11T21:26:03.831923" elapsed="0.056240"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:08:58.970066" elapsed="0.229684"/>
+<status status="PASS" start="2024-04-11T21:26:03.830923" elapsed="0.057240"/>
 </kw>
-<kw name="Então o sistema exibe uma mensagem de erro:" owner="loginSteps">
-<kw name="AlertaDeErro" owner="cadastroPage">
-<kw name="Retornar Mensagem" owner="base">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:59.200750" level="INFO">Verifying element '//div[@class="alert alert-danger"]' contains exact text 'Email é um campo obrigatório'.</msg>
-<arg>${locator}</arg>
-<arg>${texto}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-04-08T11:08:59.200750" elapsed="0.027008"/>
-</kw>
-<arg>${alerta_erro}</arg>
-<arg>${msg}</arg>
-<status status="PASS" start="2024-04-08T11:08:59.199750" elapsed="0.028008"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:08:59.310210" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-33.png"&gt;&lt;img src="selenium-screenshot-33.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:08:59.227758" elapsed="0.082452"/>
-</kw>
-<arg>${msg}</arg>
-<status status="PASS" start="2024-04-08T11:08:59.199750" elapsed="0.110460"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-08T11:08:59.310210" elapsed="2.409177"/>
-</kw>
-<arg>Email é um campo obrigatório</arg>
-<status status="PASS" start="2024-04-08T11:08:59.199750" elapsed="2.519637"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:08:50.789386" elapsed="10.930001"/>
-</test>
-<test id="s1-t3" name="Cenario: Login com senha em branco" line="23">
-<kw name="Dado que o usuario esteja no site seu barriga" owner="loginSteps">
-<kw name="Abrir navegador" owner="base">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:01.720387" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
-<arg>${Site}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-08T11:09:01.720387" elapsed="11.832366"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-08T11:09:13.552753" elapsed="0.109253"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:01.720387" elapsed="11.941619"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:01.720387" elapsed="11.941619"/>
-</kw>
-<kw name="Quando o usuario preencher o campo email do login" owner="loginSteps">
-<kw name="InserirEmail" owner="cadastroPage">
-<kw name="Escrever" owner="base">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:13.663006" level="INFO">Typing text 'teste@desafio.com' into text field '//input[@id="email"]'.</msg>
-<arg>${locator}</arg>
-<arg>${variavel}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:13.662006" elapsed="0.059015"/>
-</kw>
-<arg>${input_email}</arg>
-<arg>${email}</arg>
-<status status="PASS" start="2024-04-08T11:09:13.662006" elapsed="0.059015"/>
-</kw>
-<arg>teste@desafio.com</arg>
-<status status="PASS" start="2024-04-08T11:09:13.662006" elapsed="0.059015"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:13.662006" elapsed="0.059015"/>
-</kw>
-<kw name="E o usuario nao preencher o campo senha" owner="loginSteps">
-<kw name="InserirSenha" owner="cadastroPage">
-<kw name="Escrever" owner="base">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:13.722021" level="INFO">Typing text '' into text field '//input[@id="senha"]'.</msg>
-<arg>${locator}</arg>
-<arg>${variavel}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:13.722021" elapsed="0.041480"/>
-</kw>
-<arg>${input_senha}</arg>
-<arg>${senha}</arg>
-<status status="PASS" start="2024-04-08T11:09:13.721021" elapsed="0.042480"/>
-</kw>
-<arg>senha=</arg>
-<status status="PASS" start="2024-04-08T11:09:13.721021" elapsed="0.042480"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:13.721021" elapsed="0.042480"/>
-</kw>
-<kw name="E o usuario clicar no botao “Entrar”" owner="loginSteps">
+<kw name="E o usuario clicar no botao “Salvar”" owner="movimentacaoSteps">
 <kw name="ClicarNoBotao" owner="loginPage">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:13.857304" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-34.png"&gt;&lt;img src="selenium-screenshot-34.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-11T21:26:03.992212" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-198.png"&gt;&lt;img src="selenium-screenshot-198.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:09:13.764501" elapsed="0.092803"/>
+<status status="PASS" start="2024-04-11T21:26:03.888163" elapsed="0.104049"/>
 </kw>
 <kw name="Clicar" owner="base">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:13.858304" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<msg time="2024-04-11T21:26:03.992212" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:13.858304" elapsed="0.724721"/>
+<status status="PASS" start="2024-04-11T21:26:03.992212" elapsed="0.129852"/>
 </kw>
 <arg>${bnt_login}</arg>
-<status status="PASS" start="2024-04-08T11:09:13.858304" elapsed="0.724721"/>
+<status status="PASS" start="2024-04-11T21:26:03.992212" elapsed="0.129852"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:09:13.763501" elapsed="0.819524"/>
+<status status="PASS" start="2024-04-11T21:26:03.888163" elapsed="0.233901"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:09:13.763501" elapsed="0.819524"/>
+<status status="PASS" start="2024-04-11T21:26:03.888163" elapsed="0.233901"/>
 </kw>
-<kw name="Então o sistema exibe uma mensagem de erro:" owner="loginSteps">
-<kw name="AlertaDeErro" owner="cadastroPage">
-<kw name="Retornar Mensagem" owner="base">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:14.584026" level="INFO">Verifying element '//div[@class="alert alert-danger"]' contains exact text 'Senha é um campo obrigatório'.</msg>
-<arg>${locator}</arg>
-<arg>${texto}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-04-08T11:09:14.584026" elapsed="0.014003"/>
-</kw>
-<arg>${alerta_erro}</arg>
-<arg>${msg}</arg>
-<status status="PASS" start="2024-04-08T11:09:14.584026" elapsed="0.014003"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:15.221777" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:09:14.598029" elapsed="0.623748"/>
-</kw>
-<arg>${msg}</arg>
-<status status="PASS" start="2024-04-08T11:09:14.584026" elapsed="0.638751"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-08T11:09:15.222777" elapsed="3.668915"/>
-</kw>
-<arg>Senha é um campo obrigatório</arg>
-<status status="PASS" start="2024-04-08T11:09:14.583025" elapsed="4.308667"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:01.720387" elapsed="17.171305"/>
-</test>
-<test id="s1-t4" name="Cenario: Login com email invalido" line="30">
-<kw name="Dado que o usuario esteja no site seu barriga" owner="loginSteps">
-<kw name="Abrir navegador" owner="base">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:18.892692" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
-<arg>${Site}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-08T11:09:18.892692" elapsed="5.682188"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-08T11:09:24.574880" elapsed="0.121057"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:18.892692" elapsed="5.803245"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:18.892692" elapsed="5.803245"/>
-</kw>
-<kw name="Quando o usuario preencher o campo email invalido" owner="loginSteps">
-<kw name="InserirEmail" owner="cadastroPage">
-<kw name="Escrever" owner="base">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:24.696936" level="INFO">Typing text 'testetestando@invalido.com' into text field '//input[@id="email"]'.</msg>
-<arg>${locator}</arg>
-<arg>${variavel}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:24.696936" elapsed="0.063224"/>
-</kw>
-<arg>${input_email}</arg>
-<arg>${email}</arg>
-<status status="PASS" start="2024-04-08T11:09:24.695937" elapsed="0.064223"/>
-</kw>
-<arg>testetestando@invalido.com</arg>
-<status status="PASS" start="2024-04-08T11:09:24.695937" elapsed="0.064223"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:24.695937" elapsed="0.064223"/>
-</kw>
-<kw name="E o usuario preencher o campo senha" owner="loginSteps">
-<kw name="InserirSenha" owner="cadastroPage">
-<kw name="Escrever" owner="base">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:24.761160" level="INFO">Typing text '1234' into text field '//input[@id="senha"]'.</msg>
-<arg>${locator}</arg>
-<arg>${variavel}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:24.761160" elapsed="0.048637"/>
-</kw>
-<arg>${input_senha}</arg>
-<arg>${senha}</arg>
-<status status="PASS" start="2024-04-08T11:09:24.760160" elapsed="0.049637"/>
-</kw>
-<arg>1234</arg>
-<status status="PASS" start="2024-04-08T11:09:24.760160" elapsed="0.049637"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:24.760160" elapsed="0.049637"/>
-</kw>
-<kw name="E o usuario clicar no botao “Entrar”" owner="loginSteps">
-<kw name="ClicarNoBotao" owner="loginPage">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:24.901631" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-36.png"&gt;&lt;img src="selenium-screenshot-36.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:09:24.810798" elapsed="0.090833"/>
-</kw>
-<kw name="Clicar" owner="base">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:24.901631" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:24.901631" elapsed="0.139694"/>
-</kw>
-<arg>${bnt_login}</arg>
-<status status="PASS" start="2024-04-08T11:09:24.901631" elapsed="0.139694"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:24.809797" elapsed="0.231528"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:24.809797" elapsed="0.231528"/>
-</kw>
-<kw name="Então o sistema exibe uma mensagem de erro:" owner="loginSteps">
-<kw name="AlertaDeErro" owner="cadastroPage">
-<kw name="Retornar Mensagem" owner="base">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:25.042325" level="INFO">Verifying element '//div[@class="alert alert-danger"]' contains exact text 'Problemas com o login do usuário'.</msg>
-<arg>${locator}</arg>
-<arg>${texto}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-04-08T11:09:25.042325" elapsed="0.029006"/>
-</kw>
-<arg>${alerta_erro}</arg>
-<arg>${msg}</arg>
-<status status="PASS" start="2024-04-08T11:09:25.042325" elapsed="0.029006"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:25.155858" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:09:25.071331" elapsed="0.084527"/>
-</kw>
-<arg>${msg}</arg>
-<status status="PASS" start="2024-04-08T11:09:25.042325" elapsed="0.113533"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-08T11:09:25.155858" elapsed="2.075790"/>
-</kw>
-<arg>Problemas com o login do usuário</arg>
-<status status="PASS" start="2024-04-08T11:09:25.041325" elapsed="2.190323"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:18.892692" elapsed="8.338956"/>
-</test>
-<test id="s1-t5" name="Cenario: Login com senha inválida" line="37">
-<kw name="Dado que o usuario esteja no site seu barriga" owner="loginSteps">
-<kw name="Abrir navegador" owner="base">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:27.232649" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
-<arg>${Site}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-08T11:09:27.232649" elapsed="1.880344"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-08T11:09:29.113992" elapsed="0.120038"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:27.232649" elapsed="2.001381"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:27.232649" elapsed="2.001381"/>
-</kw>
-<kw name="Quando o usuario preencher o campo email do login" owner="loginSteps">
-<kw name="InserirEmail" owner="cadastroPage">
-<kw name="Escrever" owner="base">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:29.235030" level="INFO">Typing text 'teste@desafio.com' into text field '//input[@id="email"]'.</msg>
-<arg>${locator}</arg>
-<arg>${variavel}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:29.235030" elapsed="0.058013"/>
-</kw>
-<arg>${input_email}</arg>
-<arg>${email}</arg>
-<status status="PASS" start="2024-04-08T11:09:29.234030" elapsed="0.059013"/>
-</kw>
-<arg>teste@desafio.com</arg>
-<status status="PASS" start="2024-04-08T11:09:29.234030" elapsed="0.059013"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:29.234030" elapsed="0.059013"/>
-</kw>
-<kw name="E o usuario preencher o campo senha invalido" owner="loginSteps">
-<kw name="InserirSenha" owner="cadastroPage">
-<kw name="Escrever" owner="base">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:29.294043" level="INFO">Typing text '123456' into text field '//input[@id="senha"]'.</msg>
-<arg>${locator}</arg>
-<arg>${variavel}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:29.294043" elapsed="0.046516"/>
-</kw>
-<arg>${input_senha}</arg>
-<arg>${senha}</arg>
-<status status="PASS" start="2024-04-08T11:09:29.294043" elapsed="0.046516"/>
-</kw>
-<arg>123456</arg>
-<status status="PASS" start="2024-04-08T11:09:29.294043" elapsed="0.046516"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:29.293043" elapsed="0.047516"/>
-</kw>
-<kw name="E o usuario clicar no botao “Entrar”" owner="loginSteps">
-<kw name="ClicarNoBotao" owner="loginPage">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:29.429093" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-38.png"&gt;&lt;img src="selenium-screenshot-38.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:09:29.341560" elapsed="0.087533"/>
-</kw>
-<kw name="Clicar" owner="base">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:29.429093" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:29.429093" elapsed="0.338518"/>
-</kw>
-<arg>${bnt_login}</arg>
-<status status="PASS" start="2024-04-08T11:09:29.429093" elapsed="0.338518"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:29.341560" elapsed="0.426051"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:29.341560" elapsed="0.426051"/>
-</kw>
-<kw name="Então o sistema exibe uma mensagem de erro:" owner="loginSteps">
-<kw name="AlertaDeErro" owner="cadastroPage">
-<kw name="Retornar Mensagem" owner="base">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:29.768612" level="INFO">Verifying element '//div[@class="alert alert-danger"]' contains exact text 'Problemas com o login do usuário'.</msg>
-<arg>${locator}</arg>
-<arg>${texto}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-04-08T11:09:29.768612" elapsed="0.025911"/>
-</kw>
-<arg>${alerta_erro}</arg>
-<arg>${msg}</arg>
-<status status="PASS" start="2024-04-08T11:09:29.767611" elapsed="0.026912"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:29.871718" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-39.png"&gt;&lt;img src="selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:09:29.795523" elapsed="0.076195"/>
-</kw>
-<arg>${msg}</arg>
-<status status="PASS" start="2024-04-08T11:09:29.767611" elapsed="0.104107"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-08T11:09:29.871718" elapsed="2.071545"/>
-</kw>
-<arg>Problemas com o login do usuário</arg>
-<status status="PASS" start="2024-04-08T11:09:29.767611" elapsed="2.175652"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:27.232649" elapsed="4.710614"/>
-</test>
-<test id="s1-t6" name="Cenario: Login com email e senha em brancos" line="44">
-<kw name="Dado que o usuario esteja no site seu barriga" owner="loginSteps">
-<kw name="Abrir navegador" owner="base">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:31.945264" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
-<arg>${Site}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-08T11:09:31.944265" elapsed="1.791247"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-08T11:09:33.735512" elapsed="0.115501"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:31.944265" elapsed="1.906748"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:31.944265" elapsed="1.906748"/>
-</kw>
-<kw name="Quando o usuario nao preencher o campo email" owner="loginSteps">
-<kw name="InserirEmail" owner="cadastroPage">
-<kw name="Escrever" owner="base">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:33.852013" level="INFO">Typing text '' into text field '//input[@id="email"]'.</msg>
-<arg>${locator}</arg>
-<arg>${variavel}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:33.852013" elapsed="0.049515"/>
-</kw>
-<arg>${input_email}</arg>
-<arg>${email}</arg>
-<status status="PASS" start="2024-04-08T11:09:33.852013" elapsed="0.049515"/>
-</kw>
-<arg>email=</arg>
-<status status="PASS" start="2024-04-08T11:09:33.851013" elapsed="0.050515"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:33.851013" elapsed="0.050515"/>
-</kw>
-<kw name="E o usuario nao preencher o campo senha" owner="loginSteps">
-<kw name="InserirSenha" owner="cadastroPage">
-<kw name="Escrever" owner="base">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:33.902529" level="INFO">Typing text '' into text field '//input[@id="senha"]'.</msg>
-<arg>${locator}</arg>
-<arg>${variavel}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:33.902529" elapsed="0.044487"/>
-</kw>
-<arg>${input_senha}</arg>
-<arg>${senha}</arg>
-<status status="PASS" start="2024-04-08T11:09:33.902529" elapsed="0.044487"/>
-</kw>
-<arg>senha=</arg>
-<status status="PASS" start="2024-04-08T11:09:33.902529" elapsed="0.044487"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:33.902529" elapsed="0.044487"/>
-</kw>
-<kw name="E o usuario clicar no botao “Entrar”" owner="loginSteps">
-<kw name="ClicarNoBotao" owner="loginPage">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:34.045971" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-40.png"&gt;&lt;img src="selenium-screenshot-40.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:09:33.948017" elapsed="0.097954"/>
-</kw>
-<kw name="Clicar" owner="base">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:34.046972" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:34.045971" elapsed="0.124023"/>
-</kw>
-<arg>${bnt_login}</arg>
-<status status="PASS" start="2024-04-08T11:09:34.045971" elapsed="0.125023"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:33.947016" elapsed="0.223978"/>
-</kw>
-<status status="PASS" start="2024-04-08T11:09:33.947016" elapsed="0.223978"/>
-</kw>
-<kw name="Então o sistema exibe duas mensagem de erros:" owner="loginSteps">
-<kw name="Alerta de erros" owner="loginPage">
+<kw name="Então o sistema exibe uma mensagem de erros:" owner="movimentacaoSteps">
+<kw name="AlertaDeErro2" owner="cadastroPage">
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:34.199677" level="INFO">Element '//div[@class="alert alert-danger"]' contains text 'Email é um campo obrigatório'.</msg>
+<msg time="2024-04-11T21:26:04.148391" level="INFO">Element '//div[@class="alert alert-danger"]' contains text 'Data da Movimentação inválida (DD/MM/YYYY)'.</msg>
 <arg>${alerta_erro}</arg>
-<arg>${msg1}</arg>
+<arg>${msg}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-04-08T11:09:34.171995" elapsed="0.027682"/>
+<status status="PASS" start="2024-04-11T21:26:04.123063" elapsed="0.025328"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:34.209679" level="INFO">Element '//div[@class="alert alert-danger"][2]' contains text 'Senha é um campo obrigatório'.</msg>
-<arg>${alerta_erro2}</arg>
+<msg time="2024-04-11T21:26:04.156394" level="INFO">Element '//div[@class="alert alert-danger"]' contains text 'Data da Movimentação deve ser menor ou igual à data atual'.</msg>
+<arg>${alerta_erro}</arg>
 <arg>${msg2}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-04-08T11:09:34.199677" elapsed="0.010002"/>
-</kw>
-<arg>${msg1}</arg>
-<arg>${msg2}</arg>
-<status status="PASS" start="2024-04-08T11:09:34.170994" elapsed="0.039685"/>
+<status status="PASS" start="2024-04-11T21:26:04.148391" elapsed="0.008003"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:34.294934" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-41.png"&gt;&lt;img src="selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-11T21:26:04.244633" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-199.png"&gt;&lt;img src="selenium-screenshot-199.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:09:34.210679" elapsed="0.084255"/>
+<status status="PASS" start="2024-04-11T21:26:04.156394" elapsed="0.088239"/>
+</kw>
+<arg>${msg}</arg>
+<arg>${msg2}</arg>
+<status status="PASS" start="2024-04-11T21:26:04.123063" elapsed="0.121570"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-08T11:09:34.294934" elapsed="2.083033"/>
+<status status="PASS" start="2024-04-11T21:26:04.244633" elapsed="2.075883"/>
 </kw>
-<arg>Email é um campo obrigatório</arg>
-<arg>Senha é um campo obrigatório</arg>
-<status status="PASS" start="2024-04-08T11:09:34.170994" elapsed="2.206973"/>
+<arg>Data da Movimentação inválida (DD/MM/YYYY)</arg>
+<arg>Data da Movimentação deve ser menor ou igual à data atual</arg>
+<status status="PASS" start="2024-04-11T21:26:04.122064" elapsed="2.198452"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:09:31.944265" elapsed="4.433702"/>
+<tag>teste</tag>
+<status status="PASS" start="2024-04-11T21:26:00.618469" elapsed="5.702047"/>
 </test>
-<test id="s1-t7" name="Cenario: Login com email e senha inválidos" line="51">
-<kw name="Dado que o usuario esteja no site seu barriga" owner="loginSteps">
+<test id="s1-t2" name="Cenario: Criar movimentação com data do pagamento sem as barras" line="94">
+<kw name="Dado que o usuario esteja logado" owner="movimentacaoSteps">
 <kw name="Abrir navegador" owner="base">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:36.379968" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<msg time="2024-04-11T21:26:06.322516" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
 <arg>${Site}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-08T11:09:36.378968" elapsed="2.579509"/>
+<status status="PASS" start="2024-04-11T21:26:06.321516" elapsed="1.835216"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-08T11:09:38.958477" elapsed="0.121535"/>
+<status status="PASS" start="2024-04-11T21:26:08.156732" elapsed="0.114630"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:09:36.378968" elapsed="2.701044"/>
+<status status="PASS" start="2024-04-11T21:26:06.321516" elapsed="1.949846"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:09:36.378968" elapsed="2.701044"/>
-</kw>
-<kw name="Quando o usuario preencher o campo email invalido" owner="loginSteps">
 <kw name="InserirEmail" owner="cadastroPage">
 <kw name="Escrever" owner="base">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:39.081012" level="INFO">Typing text 'testetestando@invalido.com' into text field '//input[@id="email"]'.</msg>
+<msg time="2024-04-11T21:26:08.271362" level="INFO">Typing text 'teste@desafio.com' into text field '//input[@id="email"]'.</msg>
 <arg>${locator}</arg>
 <arg>${variavel}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:39.081012" elapsed="0.061519"/>
+<status status="PASS" start="2024-04-11T21:26:08.271362" elapsed="0.056789"/>
 </kw>
 <arg>${input_email}</arg>
 <arg>${email}</arg>
-<status status="PASS" start="2024-04-08T11:09:39.080012" elapsed="0.063519"/>
+<status status="PASS" start="2024-04-11T21:26:08.271362" elapsed="0.056789"/>
 </kw>
-<arg>testetestando@invalido.com</arg>
-<status status="PASS" start="2024-04-08T11:09:39.080012" elapsed="0.063519"/>
+<arg>teste@desafio.com</arg>
+<status status="PASS" start="2024-04-11T21:26:08.271362" elapsed="0.056789"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:09:39.080012" elapsed="0.063519"/>
-</kw>
-<kw name="E o usuario preencher o campo senha invalido" owner="loginSteps">
 <kw name="InserirSenha" owner="cadastroPage">
 <kw name="Escrever" owner="base">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:39.144532" level="INFO">Typing text '123456' into text field '//input[@id="senha"]'.</msg>
+<msg time="2024-04-11T21:26:08.329345" level="INFO">Typing text '1234' into text field '//input[@id="senha"]'.</msg>
 <arg>${locator}</arg>
 <arg>${variavel}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:39.144532" elapsed="0.043009"/>
+<status status="PASS" start="2024-04-11T21:26:08.328151" elapsed="0.044526"/>
 </kw>
 <arg>${input_senha}</arg>
 <arg>${senha}</arg>
-<status status="PASS" start="2024-04-08T11:09:39.143531" elapsed="0.044010"/>
+<status status="PASS" start="2024-04-11T21:26:08.328151" elapsed="0.044526"/>
 </kw>
-<arg>123456</arg>
-<status status="PASS" start="2024-04-08T11:09:39.143531" elapsed="0.044010"/>
+<arg>1234</arg>
+<status status="PASS" start="2024-04-11T21:26:08.328151" elapsed="0.045527"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:09:39.143531" elapsed="0.045010"/>
-</kw>
-<kw name="E o usuario clicar no botao “Entrar”" owner="loginSteps">
 <kw name="ClicarNoBotao" owner="loginPage">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:39.280191" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-42.png"&gt;&lt;img src="selenium-screenshot-42.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-11T21:26:08.469074" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-200.png"&gt;&lt;img src="selenium-screenshot-200.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:09:39.188541" elapsed="0.091650"/>
+<status status="PASS" start="2024-04-11T21:26:08.373678" elapsed="0.096396"/>
 </kw>
 <kw name="Clicar" owner="base">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:39.281191" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<msg time="2024-04-11T21:26:08.470074" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-08T11:09:39.281191" elapsed="0.125885"/>
+<status status="PASS" start="2024-04-11T21:26:08.470074" elapsed="0.355128"/>
 </kw>
 <arg>${bnt_login}</arg>
-<status status="PASS" start="2024-04-08T11:09:39.281191" elapsed="0.125885"/>
+<status status="PASS" start="2024-04-11T21:26:08.470074" elapsed="0.355128"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:09:39.188541" elapsed="0.218535"/>
+<status status="PASS" start="2024-04-11T21:26:08.373678" elapsed="0.452523"/>
 </kw>
-<status status="PASS" start="2024-04-08T11:09:39.188541" elapsed="0.219535"/>
+<kw name="Reset" owner="contasPage">
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:08.826201" level="INFO">Clicking element '//a[@href="/reset"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:08.826201" elapsed="0.167967"/>
 </kw>
-<kw name="Então o sistema exibe uma mensagem de erro:" owner="loginSteps">
+<arg>${reset}</arg>
+<status status="PASS" start="2024-04-11T21:26:08.826201" elapsed="0.167967"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:08.826201" elapsed="0.167967"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:06.321516" elapsed="2.672652"/>
+</kw>
+<kw name="Quando o usuario clicar no link “Criar Movimentação”" owner="movimentacaoSteps">
+<kw name="Clicar movimentacao" owner="movimentacaoPage">
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:08.995168" level="INFO">Clicking element '//a[@href="/movimentacao"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:08.995168" elapsed="0.143864"/>
+</kw>
+<arg>${movimentacao}</arg>
+<status status="PASS" start="2024-04-11T21:26:08.995168" elapsed="0.143864"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:08.995168" elapsed="0.143864"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:08.995168" elapsed="0.144900"/>
+</kw>
+<kw name="E o usuario preencher o campo Data de Movimentação" owner="movimentacaoSteps">
+<kw name="Inserir data movimentacao" owner="movimentacaoPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:09.141068" level="INFO">Typing text '11/04/2024' into text field '//input[@id="data_transacao"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:09.141068" elapsed="0.046092"/>
+</kw>
+<arg>${data_mov}</arg>
+<arg>${data}</arg>
+<status status="PASS" start="2024-04-11T21:26:09.140068" elapsed="0.047092"/>
+</kw>
+<arg>11/04/2024</arg>
+<status status="PASS" start="2024-04-11T21:26:09.140068" elapsed="0.047092"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:09.140068" elapsed="0.047092"/>
+</kw>
+<kw name="E o usuario preencher o campo Data de Pagamento sem barra" owner="movimentacaoSteps">
+<kw name="Inserir data pagamento" owner="movimentacaoPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:09.188160" level="INFO">Typing text '14112024' into text field '//input[@id="data_pagamento"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:09.188160" elapsed="0.043320"/>
+</kw>
+<arg>${data_pag_mov}</arg>
+<arg>${data}</arg>
+<status status="PASS" start="2024-04-11T21:26:09.188160" elapsed="0.043320"/>
+</kw>
+<arg>14112024</arg>
+<status status="PASS" start="2024-04-11T21:26:09.188160" elapsed="0.043320"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:09.187160" elapsed="0.044320"/>
+</kw>
+<kw name="E o usuario preencher o campo Descrição" owner="movimentacaoSteps">
+<kw name="Inserir descricao" owner="movimentacaoPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:09.232983" level="INFO">Typing text 'teste' into text field '//input[@id="descricao"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:09.232983" elapsed="0.041148"/>
+</kw>
+<arg>${desc_mov}</arg>
+<arg>${desc}</arg>
+<status status="PASS" start="2024-04-11T21:26:09.231480" elapsed="0.043651"/>
+</kw>
+<arg>teste</arg>
+<status status="PASS" start="2024-04-11T21:26:09.231480" elapsed="0.043651"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:09.231480" elapsed="0.043651"/>
+</kw>
+<kw name="E o usuario preencher o campo Interessado" owner="movimentacaoSteps">
+<kw name="Inserir interessado" owner="movimentacaoPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:09.276132" level="INFO">Typing text 'teste' into text field '//input[@id="interessado"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:09.276132" elapsed="0.040146"/>
+</kw>
+<arg>${int_mov}</arg>
+<arg>${int}</arg>
+<status status="PASS" start="2024-04-11T21:26:09.276132" elapsed="0.040146"/>
+</kw>
+<arg>teste</arg>
+<status status="PASS" start="2024-04-11T21:26:09.275131" elapsed="0.041147"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:09.275131" elapsed="0.041147"/>
+</kw>
+<kw name="E o usuario preencher o campo Valor" owner="movimentacaoSteps">
+<kw name="Inserir valor" owner="movimentacaoPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:09.317781" level="INFO">Typing text '123' into text field '//input[@id="valor"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:09.317781" elapsed="0.041760"/>
+</kw>
+<arg>${valor_mov}</arg>
+<arg>${valor}</arg>
+<status status="PASS" start="2024-04-11T21:26:09.317781" elapsed="0.041760"/>
+</kw>
+<arg>123</arg>
+<status status="PASS" start="2024-04-11T21:26:09.317781" elapsed="0.041760"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:09.317781" elapsed="0.041760"/>
+</kw>
+<kw name="E o usuario preencher o campo Conta" owner="movimentacaoSteps">
+<kw name="Selecionar conta" owner="movimentacaoPage">
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:09.360542" level="INFO">Clicking element '//select[@id="conta"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:09.360542" elapsed="0.033537"/>
+</kw>
+<arg>${sel_conta}</arg>
+<status status="PASS" start="2024-04-11T21:26:09.360542" elapsed="0.033537"/>
+</kw>
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:09.395079" level="INFO">Clicking element '//option[text()="Conta para movimentacoes"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:09.395079" elapsed="0.021973"/>
+</kw>
+<arg>${selecionar_conta}</arg>
+<status status="PASS" start="2024-04-11T21:26:09.394079" elapsed="0.022973"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:09.359541" elapsed="0.057511"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:09.359541" elapsed="0.057511"/>
+</kw>
+<kw name="E o usuario clicar no botao “Salvar”" owner="movimentacaoSteps">
+<kw name="ClicarNoBotao" owner="loginPage">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:09.518534" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-201.png"&gt;&lt;img src="selenium-screenshot-201.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-11T21:26:09.418052" elapsed="0.100482"/>
+</kw>
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:09.519624" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:09.519624" elapsed="0.127542"/>
+</kw>
+<arg>${bnt_login}</arg>
+<status status="PASS" start="2024-04-11T21:26:09.519624" elapsed="0.128542"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:09.418052" elapsed="0.230114"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:09.418052" elapsed="0.230114"/>
+</kw>
+<kw name="Então o sistema exibe uma mensagem de erro:" owner="movimentacaoSteps">
 <kw name="AlertaDeErro" owner="cadastroPage">
 <kw name="Retornar Mensagem" owner="base">
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:39.409076" level="INFO">Verifying element '//div[@class="alert alert-danger"]' contains exact text 'Problemas com o login do usuário'.</msg>
+<msg time="2024-04-11T21:26:09.649340" level="INFO">Verifying element '//div[@class="alert alert-danger"]' contains exact text 'Data do pagamento inválida (DD/MM/YYYY)'.</msg>
 <arg>${locator}</arg>
 <arg>${texto}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-04-08T11:09:39.409076" elapsed="0.025511"/>
+<status status="PASS" start="2024-04-11T21:26:09.648166" elapsed="0.026177"/>
 </kw>
 <arg>${alerta_erro}</arg>
 <arg>${msg}</arg>
-<status status="PASS" start="2024-04-08T11:09:39.408076" elapsed="0.026511"/>
+<status status="PASS" start="2024-04-11T21:26:09.648166" elapsed="0.026177"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-08T11:09:39.521105" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-43.png"&gt;&lt;img src="selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-11T21:26:09.765050" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-202.png"&gt;&lt;img src="selenium-screenshot-202.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-08T11:09:39.435588" elapsed="0.085517"/>
+<status status="PASS" start="2024-04-11T21:26:09.674343" elapsed="0.090707"/>
 </kw>
 <arg>${msg}</arg>
-<status status="PASS" start="2024-04-08T11:09:39.408076" elapsed="0.113029"/>
+<status status="PASS" start="2024-04-11T21:26:09.648166" elapsed="0.116884"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-08T11:09:39.521105" elapsed="2.114001"/>
+<status status="PASS" start="2024-04-11T21:26:09.765050" elapsed="2.068905"/>
 </kw>
-<arg>Problemas com o login do usuário</arg>
-<status status="PASS" start="2024-04-08T11:09:39.408076" elapsed="2.227030"/>
+<arg>Data do pagamento inválida (DD/MM/YYYY)</arg>
+<status status="PASS" start="2024-04-11T21:26:09.648166" elapsed="2.185789"/>
 </kw>
-<tag>test</tag>
-<status status="PASS" start="2024-04-08T11:09:36.378968" elapsed="5.256138"/>
+<tag>teste</tag>
+<status status="PASS" start="2024-04-11T21:26:06.321516" elapsed="5.512439"/>
 </test>
-<doc>Funcionalidade de login</doc>
-<status status="PASS" start="2024-04-08T11:08:31.790075" elapsed="69.846036"/>
+<test id="s1-t3" name="Cenario: Criar movimentação com valor com caracteres" line="107">
+<kw name="Dado que o usuario esteja logado" owner="movimentacaoSteps">
+<kw name="Abrir navegador" owner="base">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:11.835955" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<arg>${Site}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-11T21:26:11.834955" elapsed="1.845191"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-11T21:26:13.680146" elapsed="0.120064"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:11.834955" elapsed="1.965255"/>
+</kw>
+<kw name="InserirEmail" owner="cadastroPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:13.800210" level="INFO">Typing text 'teste@desafio.com' into text field '//input[@id="email"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:13.800210" elapsed="0.057888"/>
+</kw>
+<arg>${input_email}</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2024-04-11T21:26:13.800210" elapsed="0.057888"/>
+</kw>
+<arg>teste@desafio.com</arg>
+<status status="PASS" start="2024-04-11T21:26:13.800210" elapsed="0.057888"/>
+</kw>
+<kw name="InserirSenha" owner="cadastroPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:13.859574" level="INFO">Typing text '1234' into text field '//input[@id="senha"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:13.858098" elapsed="0.046972"/>
+</kw>
+<arg>${input_senha}</arg>
+<arg>${senha}</arg>
+<status status="PASS" start="2024-04-11T21:26:13.858098" elapsed="0.046972"/>
+</kw>
+<arg>1234</arg>
+<status status="PASS" start="2024-04-11T21:26:13.858098" elapsed="0.046972"/>
+</kw>
+<kw name="ClicarNoBotao" owner="loginPage">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:13.996440" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-203.png"&gt;&lt;img src="selenium-screenshot-203.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-11T21:26:13.905070" elapsed="0.091370"/>
+</kw>
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:13.997943" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:13.997943" elapsed="0.363236"/>
+</kw>
+<arg>${bnt_login}</arg>
+<status status="PASS" start="2024-04-11T21:26:13.997943" elapsed="0.363236"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:13.905070" elapsed="0.456109"/>
+</kw>
+<kw name="Reset" owner="contasPage">
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:14.362179" level="INFO">Clicking element '//a[@href="/reset"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:14.362179" elapsed="0.184782"/>
+</kw>
+<arg>${reset}</arg>
+<status status="PASS" start="2024-04-11T21:26:14.361179" elapsed="0.185782"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:14.361179" elapsed="0.185782"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:11.834955" elapsed="2.712006"/>
+</kw>
+<kw name="Quando o usuario clicar no link “Criar Movimentação”" owner="movimentacaoSteps">
+<kw name="Clicar movimentacao" owner="movimentacaoPage">
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:14.547961" level="INFO">Clicking element '//a[@href="/movimentacao"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:14.547961" elapsed="0.141160"/>
+</kw>
+<arg>${movimentacao}</arg>
+<status status="PASS" start="2024-04-11T21:26:14.547961" elapsed="0.141160"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:14.546961" elapsed="0.142160"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:14.546961" elapsed="0.142160"/>
+</kw>
+<kw name="E o usuario preencher o campo Data de Movimentação" owner="movimentacaoSteps">
+<kw name="Inserir data movimentacao" owner="movimentacaoPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:14.690121" level="INFO">Typing text '11/04/2024' into text field '//input[@id="data_transacao"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:14.690121" elapsed="0.047095"/>
+</kw>
+<arg>${data_mov}</arg>
+<arg>${data}</arg>
+<status status="PASS" start="2024-04-11T21:26:14.690121" elapsed="0.047095"/>
+</kw>
+<arg>11/04/2024</arg>
+<status status="PASS" start="2024-04-11T21:26:14.690121" elapsed="0.048095"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:14.689121" elapsed="0.049095"/>
+</kw>
+<kw name="E o usuario preencher o campo Data de Pagamento" owner="movimentacaoSteps">
+<kw name="Inserir data pagamento" owner="movimentacaoPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:14.739330" level="INFO">Typing text '11/04/2024' into text field '//input[@id="data_pagamento"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:14.738216" elapsed="0.046856"/>
+</kw>
+<arg>${data_pag_mov}</arg>
+<arg>${data}</arg>
+<status status="PASS" start="2024-04-11T21:26:14.738216" elapsed="0.046856"/>
+</kw>
+<arg>11/04/2024</arg>
+<status status="PASS" start="2024-04-11T21:26:14.738216" elapsed="0.046856"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:14.738216" elapsed="0.046856"/>
+</kw>
+<kw name="E o usuario preencher o campo Descrição" owner="movimentacaoSteps">
+<kw name="Inserir descricao" owner="movimentacaoPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:14.786072" level="INFO">Typing text 'teste' into text field '//input[@id="descricao"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:14.786072" elapsed="0.044006"/>
+</kw>
+<arg>${desc_mov}</arg>
+<arg>${desc}</arg>
+<status status="PASS" start="2024-04-11T21:26:14.785072" elapsed="0.046006"/>
+</kw>
+<arg>teste</arg>
+<status status="PASS" start="2024-04-11T21:26:14.785072" elapsed="0.046006"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:14.785072" elapsed="0.046006"/>
+</kw>
+<kw name="E o usuario preencher o campo Interessado" owner="movimentacaoSteps">
+<kw name="Inserir interessado" owner="movimentacaoPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:14.832079" level="INFO">Typing text 'teste' into text field '//input[@id="interessado"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:14.832079" elapsed="0.042018"/>
+</kw>
+<arg>${int_mov}</arg>
+<arg>${int}</arg>
+<status status="PASS" start="2024-04-11T21:26:14.831078" elapsed="0.043019"/>
+</kw>
+<arg>teste</arg>
+<status status="PASS" start="2024-04-11T21:26:14.831078" elapsed="0.043019"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:14.831078" elapsed="0.043019"/>
+</kw>
+<kw name="E o usuario preencher o campo Valor com caracteres" owner="movimentacaoSteps">
+<kw name="Inserir valor" owner="movimentacaoPage">
+<kw name="Escrever" owner="base">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:14.875097" level="INFO">Typing text '@' into text field '//input[@id="valor"]'.</msg>
+<arg>${locator}</arg>
+<arg>${variavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:14.875097" elapsed="0.041089"/>
+</kw>
+<arg>${valor_mov}</arg>
+<arg>${valor}</arg>
+<status status="PASS" start="2024-04-11T21:26:14.875097" elapsed="0.041089"/>
+</kw>
+<arg>@</arg>
+<status status="PASS" start="2024-04-11T21:26:14.874097" elapsed="0.043089"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:14.874097" elapsed="0.043089"/>
+</kw>
+<kw name="E o usuario preencher o campo Conta" owner="movimentacaoSteps">
+<kw name="Selecionar conta" owner="movimentacaoPage">
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:14.918186" level="INFO">Clicking element '//select[@id="conta"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:14.918186" elapsed="0.033971"/>
+</kw>
+<arg>${sel_conta}</arg>
+<status status="PASS" start="2024-04-11T21:26:14.917186" elapsed="0.034971"/>
+</kw>
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:14.953157" level="INFO">Clicking element '//option[text()="Conta para movimentacoes"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:14.953157" elapsed="0.023241"/>
+</kw>
+<arg>${selecionar_conta}</arg>
+<status status="PASS" start="2024-04-11T21:26:14.952157" elapsed="0.024241"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:14.917186" elapsed="0.059212"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:14.917186" elapsed="0.059212"/>
+</kw>
+<kw name="E o usuario clicar no botao “Salvar”" owner="movimentacaoSteps">
+<kw name="ClicarNoBotao" owner="loginPage">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:15.085996" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-204.png"&gt;&lt;img src="selenium-screenshot-204.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-11T21:26:14.977901" elapsed="0.108095"/>
+</kw>
+<kw name="Clicar" owner="base">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:15.085996" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T21:26:15.085996" elapsed="0.126203"/>
+</kw>
+<arg>${bnt_login}</arg>
+<status status="PASS" start="2024-04-11T21:26:15.085996" elapsed="0.127204"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:14.976398" elapsed="0.236802"/>
+</kw>
+<status status="PASS" start="2024-04-11T21:26:14.976398" elapsed="0.236802"/>
+</kw>
+<kw name="Então o sistema exibe uma mensagem de erro:" owner="movimentacaoSteps">
+<kw name="AlertaDeErro" owner="cadastroPage">
+<kw name="Retornar Mensagem" owner="base">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:15.214200" level="INFO">Verifying element '//div[@class="alert alert-danger"]' contains exact text 'Valor deve ser um número'.</msg>
+<arg>${locator}</arg>
+<arg>${texto}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-04-11T21:26:15.214200" elapsed="0.025898"/>
+</kw>
+<arg>${alerta_erro}</arg>
+<arg>${msg}</arg>
+<status status="PASS" start="2024-04-11T21:26:15.213200" elapsed="0.026898"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-11T21:26:15.331089" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-205.png"&gt;&lt;img src="selenium-screenshot-205.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-11T21:26:15.240098" elapsed="0.090991"/>
+</kw>
+<arg>${msg}</arg>
+<status status="PASS" start="2024-04-11T21:26:15.213200" elapsed="0.117889"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-11T21:26:15.331089" elapsed="2.081893"/>
+</kw>
+<arg>Valor deve ser um número</arg>
+<status status="PASS" start="2024-04-11T21:26:15.213200" elapsed="2.199782"/>
+</kw>
+<tag>teste</tag>
+<status status="PASS" start="2024-04-11T21:26:11.834955" elapsed="5.578027"/>
+</test>
+<doc>Funcionalidade Movimentacao</doc>
+<status status="PASS" start="2024-04-11T21:26:00.470911" elapsed="16.943077"/>
 </suite>
 <statistics>
 <total>
-<stat pass="7" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">test</stat>
+<stat pass="3" fail="0" skip="0">teste</stat>
 </tag>
 <suite>
-<stat pass="7" fail="0" skip="0" id="s1" name="Login">Login</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Movimentacao">Movimentacao</stat>
 </suite>
 </statistics>
 <errors>

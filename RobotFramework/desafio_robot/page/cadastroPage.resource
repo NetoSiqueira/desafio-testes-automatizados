@@ -37,3 +37,10 @@ AlertaDeErro
     [Arguments]    ${msg}
     Retornar Mensagem    ${alerta_erro}    ${msg}
     Capture Page Screenshot
+
+
+AlertaDeErro2
+    [Arguments]    ${msg}    ${msg2}
+    Element Should Contain    ${alerta_erro}    ${msg}
+    Element Should Contain    ${alerta_erro}    ${msg2}
+    Capture Page Screenshot

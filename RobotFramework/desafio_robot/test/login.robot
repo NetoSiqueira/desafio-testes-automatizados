@@ -49,7 +49,6 @@ Cenario: Login com email e senha em brancos
     Então o sistema exibe duas mensagem de erros:    Email é um campo obrigatório    Senha é um campo obrigatório
 
 Cenario: Login com email e senha inválidos
-    [Tags]    test
     Dado que o usuario esteja no site seu barriga
     Quando o usuario preencher o campo email invalido
     E o usuario preencher o campo senha invalido
